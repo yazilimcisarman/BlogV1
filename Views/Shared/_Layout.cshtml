@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>GreenLine</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/cufon-yui.js"></script>
+<script type="text/javascript" src="/js/arial.js"></script>
+<script type="text/javascript" src="/js/cuf_run.js"></script>
+<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/js/radius.js"></script>
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="menu_nav">
+        <ul>
+          <li class="active"><a href="/blogs/index">AnaSayfa</a></li>
+          @* bunlari olusturuacagiz *@
+          <li><a href="/blogs/support">Destek</a></li>
+          <li><a href="/blogs/about">Hakkimizda</a></li>
+          @* <li><a href="blog.html">Blog</a></li> *@
+          <li><a href="/blogs/contact">Iletisim</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <h1><a href="/blogs/index">Blogs<span>V1</span></a> <small>biz bu isi yapiyoruz</small></h1>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content_resize">
+      
+            @RenderBody()
+                <div class="sidebar">
+                    <div class="searchform">
+                        <form id="formsearch" name="formsearch" method="post" action="#">
+                            <span>
+                                <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" placeholder="Blog Ara" value="" type="text" />
+                            </span>
+                            <input name="button_search" src="/images/search_btn.gif" class="button_search" type="image" />
+                        </form>
+                    </div>
+                    <div class="gadget">
+                        <h2 class="star"><span>Yan</span> Menu</h2>
+                        <div class="clr"></div>
+                        <ul class="sb_menu">
+                            <li><a href="/blogs/index">AnaSayfa</a></li>
+                            <li><a href="/blogs/support">Destek</a></li>
+                            <li><a href="/blogs/about">Hakkimizda</a></li>
+                            <li><a href="/blogs/contact">Iletisim</a></li>
+                        </ul>
+                    </div>
+                    <div class="gadget">
+                        <h2 class="star"><span>Etiketler</span></h2>
+                        <div class="clr"></div>
+                        <ul class="ex_menu">
+                            <li>
+                                <a href="#">tech</a><br />
+                            </li>
+                            <li>
+                                <a href="#">software</a><br />
+                            </li>
+                            <li>
+                                <a href="#">bilgisayar</a><br />
+                            </li>
+                            <li>
+                                <a href="#">teknoloji</a><br />
+                            </li>
+                            <li>
+                                <a href="#">yazilim</a><br />
+                            </li>
+                            <li>
+                                <a href="#">tech</a><br />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div class="fbg">
+            <div class="fbg_resize">
+                <div class="col c1">
+                    <h2><span>Galeri</span></h2>
+                    <a href="#"><img src="/images/pix1.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix2.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix3.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix4.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix5.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix6.jpg" width="58" height="58" alt="" /></a>
+                </div>
+                <div class="col c2">
+                    <h2><span>Biz Kimiz</span></h2>
+                    <p>
+                        Yazilimci Sarman<br />
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <a href="#">Morbi tincidunt, orci ac convallis aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.
+                    </p>
+                </div>
+                <div class="col c3">
+                    <h2><span>Iletisim</span></h2>
+                    <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
+                    <p><a href="mailto:yazilimcisarman@gmail.com">yazilimcisarman@gmail.com</a></p>
+                    <p>
+                        +1 (123) 444-5677<br />
+                        +1 (123) 444-5678
+                    </p>
+                    <p>Address: 123 TemplateAccess Rd1</p>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_resize">
+                <p class="lf">Copyright &copy; 2010 <a href="#">BlogsV1</a> - All Rights Reserved</p>
+                <p class="rf">Design by <a href="http://www.coolwebtemplates.net/">Cool Website Templates</a></p>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE SOURCE -->
+</body>
+</html>

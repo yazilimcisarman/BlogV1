@@ -1,0 +1,55 @@
+﻿@model Blog
+
+<div class="mainbar">
+    <div class="article">
+        <h2><span>@Model.Name</span></h2>
+        <div class="clr"></div>
+        
+        <p>@Model.Description </p>
+        <p>Etiketler: <a href="#">@Model.Tags</a></p>
+        <p>
+            <a href="#"><strong>Comments (@Model.CommentCount)</strong></a> <span>&nbsp;&bull;&nbsp;</span> @Model.PublishDate.ToString("MMMM d\\t\\h, yyyy 'at' h:mm tt") <span>&nbsp;&bull;&nbsp;</span>
+        </p>
+    </div>
+    <div class="article">
+        <h2><span>Yorumlar</span></h2>
+        <div class="clr"></div>
+        @foreach (var item in ViewBag.Comments)
+        {
+            <div class="comment">
+                <a href="#"><img src="/images/userpic.gif" width="40" height="40" alt="" class="userpic" /></a>
+                <p>
+                    <a href="#">@item.Name</a> :<br />
+                    @item.PublishDate.ToString("MMMM d\\t\\h, yyyy 'at' h:mm tt")
+                </p>
+                <p>@item.Message</p>
+            </div>
+        }
+
+    </div>
+    <div class="article">
+        <h2><span>Yorum</span> Yapin</h2>
+        <div class="clr"></div>
+        <form action="/Blogs/CreateComment" method="post" id="leavereply">
+            <ol>
+                <input id="blodid" name="blogId" type="hidden" value="@Model.Id"/>
+                <li>
+                    <label for="name">Isim (zorunlu)</label>
+                    <input id="name" name="name" class="text" required/>
+                </li>
+                <li>
+                    <label for="email">Email Adresi (zorunlu)</label>
+                    <input id="email" name="email" class="text" required/>
+                </li>
+                <li>
+                    <label for="message">Mesajin</label>
+                    <textarea id="message" name="message" rows="8" cols="50"></textarea>
+                </li>
+                <li>
+                    <input type="image" name="imageField" id="imageField" src="/images/submit.gif" class="send" />
+                    <div class="clr"></div>
+                </li>
+            </ol>
+        </form>
+    </div>
+</div>
