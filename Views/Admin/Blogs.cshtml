@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "/Views/Shared/_AdminLayout.cshtml";
+}
+@model List<Blog>
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Bloglarim</h1>
+    <a href="/Admin/CreateBlog" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-download fa-sm text-white-50"></i> Blog Ekle
+    </a>
+</div>
+@if(Model.Count != 0)
+{
+    
+    @foreach (var item in Model)
+    {
+    <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">@item.Name</h6>
+            <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                     aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Aksiyonlar</div>
+                    <a class="dropdown-item" href="/Admin/EditBlog?id=@item.Id">Duzenle</a>
+                    <a class="dropdown-item" href="/Admin/Togglestatus?id=@item.Id">Acik/Kapali</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/Admin/DeleteBlog?id=@item.Id">Sil</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+            @{
+                string description = item.Description;
+                string newdescription = description.Length > 50 ? description.Substring(0, 180) + " ..." : description;
+            }
+            @newdescription
+        </div>
+        </div>
+    }
+
+}
+else
+{
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">Blog Olusturun</h6>
+        </div>
+    </div>
+}

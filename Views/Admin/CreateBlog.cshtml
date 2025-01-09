@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Blog Ekle</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-download fa-sm text-white-50"></i> Rapor Olustur
+    </a>
+</div>
+
+<form action="/Admin/CreateBlog" method="post" id="createblogform">
+
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+               id="blogname" aria-describedby="blogname"
+               placeholder="Baslik Giriniz"  required name="name">
+    </div>
+    <div class="form-group">
+        <textarea type="text" class="form-control form-control-user"
+                  id="blogdescription" placeholder="Aciklama Ekleyiniz" required name="description" rows="15"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+               id="blogimageurl" aria-describedby="blogimageurl"
+               placeholder="Fotograf Url sini giriniz."
+                required name="imageUrl">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+               id="blogtags" aria-describedby="blogtags"
+               placeholder="Etiketleri giriniz."
+                required name="tags">
+    </div>
+    @*  <a href="#" class="btn btn-success btn-icon-split">
+    <span class="icon text-white-50">
+    <i class="fas fa-check"></i>
+    </span>
+    <span class="text">Kaydet</span>
+    </a> *@
+    <button class="btn btn-success btn-icon-split" type="submit">
+        <span class="icon text-white-50">
+            <i class="fas fa-check"></i>
+        </span>
+        <span class="text">Ekle</span>
+    </button>
+
+    <a href="/Admin/Blogs" class="btn btn-secondary btn-icon-split">
+        <span class="icon text-white-50">
+            <i class="fas fa-arrow-right"></i>
+        </span>
+        <span class="text">Geri Don</span>
+    </a>
+
+
+</form>
