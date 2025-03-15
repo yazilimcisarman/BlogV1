@@ -149,6 +149,7 @@ namespace BlogV1.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
+            //burada sifre olusturuken buyuk harf kucuk harf sayi 6 karekter ve simge gerekli
             if (model.Password == model.RePassword)
             {
                 var user = new BlogIdentityUser
